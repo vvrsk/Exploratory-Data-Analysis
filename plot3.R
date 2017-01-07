@@ -7,8 +7,8 @@ library(scales)
 #Aggregarting the data based on the condition
 aggregatedTotalByType_baltimore <- aggregate(Emissions ~ type, baltimore_data, sum)
 
+plot3<-ggplot(aggregatedTotalByType_baltimore,aes(x=type,y=Emissions))+geom_bar(stat="identity")+labs(x="Type", y ="Total Emissions ", title = "Total Emissions vs Type")+theme(plot.title = element_text(hjust = 0.5))
+
 png('plot3.png', width=800, height=500, units='px')
-
-plot3<-ggplot(aggregatedTotalByType_baltimore,aes(x=type,y=Emissions/(10^6)))+geom_bar(stat="identity")+labs(x="Type", y ="Total Emissions (in millions)", title = "Total Emissions vs Type")
-
+print(plot3)
 dev.off()

@@ -23,6 +23,6 @@ dev.off()
 #Adding another plot for better understanding
 png('plot4-additional.png',width=800, height=500, units='px')
 
-ggplot(aggregatedTotalByYear_Merged,aes(x=year,y=Emissions))+geom_line( size = 0.5,linetype =3)+geom_point(aes(size = Emissions))+labs(x="Year", y ="Total Emissions (in millions)", title = "Total Emissions due to Coal vs Year")+scale_x_continuous(name= "Year",breaks = c(1999,2002,2005,2008))+theme(plot.title = element_text(hjust = 0.5))+scale_y_continuous(labels = comma)
+ggplot(aggregatedTotalByYear_Merged,aes(x=year,y=Emissions))+geom_line( size = 0.5,linetype =3)+geom_point(aes(size = Emissions))+labs(x="Year", y ="Total Emissions ", title = "Total Emissions due to Coal vs Year")+scale_x_continuous(name= "Year",breaks = c(1999,2002,2005,2008))+theme(plot.title = element_text(hjust = 0.5))+scale_y_continuous(labels = comma)
 
 dev.off()
